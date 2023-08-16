@@ -12,10 +12,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="630dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,21 +23,17 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="270dp"
             android:text="에브리데이"
-            android:textSize="22dp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginEnd="240dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/everyday"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,59 +41,85 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="142dp"
             android:layout_marginEnd="8dp"
             android:text="조이름"
-            android:textSize="22dp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="마이페이지 버튼"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
             android:src="@drawable/people"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="430dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        >
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+            >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/test1"
+                android:scaleType="fitXY"
+                android:layout_marginRight="10dp"
+                android:contentDescription="이미지1"
+                android:background="@android:color/transparent"
+                />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="이미지2"
+                android:scaleType="fitXY"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/test2"
+                app:layout_constraintStart_toEndOf="@+id/imageButton3"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton3"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/test3"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:contentDescription="이미지3"/>
+        </LinearLayout>
+    </HorizontalScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
