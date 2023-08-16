@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".LoginPage">
 
     <ImageView
         android:id="@+id/rogo"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginBottom="500dp"
+        android:layout_marginBottom="380dp"
         android:layout_weight="1"
         android:src="@drawable/rogo"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +23,6 @@
         android:id="@+id/slogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:text="협업을 더 편하게!"
         android:textColor="@color/gray_400"
         android:textSize="14sp"
@@ -60,9 +60,9 @@
         android:id="@+id/editId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="-10dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginEnd="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textId" />
@@ -84,29 +84,19 @@
         android:id="@+id/editPw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="-10dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginEnd="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPw" />
 
-    <EditText
-        android:id="@+id/editPw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="-10dp"
-        android:layout_marginEnd="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPw" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_login"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/red"
         android:text="로그인"
         android:textSize="16sp"
@@ -116,16 +106,17 @@
         app:layout_constraintTop_toBottomOf="@+id/editPw" />
 
     <Button
+        android:id="@+id/btn_signUp"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/red"
         android:text="회원가입"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
 
 
