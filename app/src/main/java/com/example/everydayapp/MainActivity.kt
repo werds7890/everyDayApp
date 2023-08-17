@@ -1,14 +1,14 @@
 package com.example.everydayapp
 
 import android.content.Intent
-import android.media.Image
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import androidx.activity.result.ActivityResultLauncher
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var writingResult:ActivityResultLauncher<Intent>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val notionBtn=findViewById<ImageButton>(R.id.notion)
         val pgBtn=findViewById<ImageButton>(R.id.programmers)
         val myPageBtn=findViewById<ImageButton>(R.id.myPage)
+        val writingBtn=findViewById<ImageButton>(R.id.writing)
 
         val intent=Intent(Intent.ACTION_VIEW, Uri.parse(""))
 
@@ -38,6 +39,10 @@ class MainActivity : AppCompatActivity() {
         }
         myPageBtn.setOnClickListener {
             val intent=Intent(this,TeamActivity::class.java)
+            startActivity(intent)
+        }
+        writingBtn.setOnClickListener {
+            val intent=Intent(this,WritingActivity::class.java)
             startActivity(intent)
         }
     }
