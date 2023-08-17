@@ -2,12 +2,16 @@ package com.example.everydayapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import androidx.core.os.persistableBundleOf
 import android.widget.TextView
+
 
 class Detail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
+
 
         val name=findViewById<TextView>(R.id.name)
         val mbti=findViewById<TextView>(R.id.mbti)
@@ -20,5 +24,7 @@ class Detail : AppCompatActivity() {
         name.setText(nameData)
         mbti.setText(mbtiData)
         motto.setText(mottoData)
+
     }
+
 }
