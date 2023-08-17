@@ -45,6 +45,7 @@ class LoginPage : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "로그인 성공!", Toast.LENGTH_SHORT).show()
 
+
                 //intent 메인으로 넘어가기 추가.
                 val intoMainIntent = Intent(this, MainActivity::class.java)
                 startActivity(intoMainIntent)
