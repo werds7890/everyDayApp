@@ -22,7 +22,7 @@
             android:name=".TeamActivity"
             android:exported="false" />
         <activity
-            android:name=".SingleUpPage"
+            android:name=".SignUpPage"
             android:exported="false" />
         <activity
             android:name=".LoginPage"
