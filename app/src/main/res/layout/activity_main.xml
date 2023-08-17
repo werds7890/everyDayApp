@@ -32,9 +32,9 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/everyday"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/everycustom"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -120,6 +120,20 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageButton3"
                 app:layout_constraintTop_toTopOf="parent" />
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="이미지4"
+                android:scaleType="fitXY"
+                android:src="@drawable/pikachu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton3"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+            </ImageButton>
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -238,7 +252,7 @@
         android:background="@drawable/round">
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/realName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="익명"
@@ -246,7 +260,7 @@
             />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/realWrite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="글을 입력해주세요." />
@@ -270,6 +284,7 @@
         android:layout_marginTop="10dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
+        android:contentDescription="writing"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"

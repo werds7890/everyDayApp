@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,14 +12,14 @@
     tools:context=".TeamActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="140dp"
         android:background="@drawable/square_box"
         android:gravity="center">
         <ImageView
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:src="@drawable/pikachu"
-            android:layout_gravity="center" />
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/hairbear" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,43 +30,46 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp">
+            android:layout_margin="10dp">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/everytime"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/everycustom"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
                 android:text="Team Name"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp">
+            android:layout_marginLeft="10dp">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/everytime"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/everycustom"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
                 android:text="ID"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp">
+            android:layout_margin="10dp">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/everytime"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/everycustom"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
                 android:text="좌우명"/>
         </LinearLayout>
     </LinearLayout>
@@ -78,14 +84,15 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical">
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="20dp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp">
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/pikachu"
+                    android:src="@drawable/hairbear"
                     app:civ_border_width="0.5dp"
                     app:civ_border_color="@color/black"
                     app:civ_border_overlay="true"/>
@@ -96,18 +103,48 @@
                     android:textSize="8pt"
                     android:textStyle="bold"
                     android:layout_margin="5dp"/>
+                <ImageButton
+                    android:id="@+id/editBtn"
+                    android:src="@drawable/pencil"
+                    android:background="@android:color/transparent"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="10dp" />
+                <ImageButton
+                    android:id="@+id/saveBtn"
+                    android:src="@drawable/save"
+                    android:background="@android:color/transparent"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"/>
             </LinearLayout>
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="130dp"
                 android:layout_marginHorizontal="20dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/cat"/>
             <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="오늘 아침 8시에 팀 회의 있습니다.\n팀원들 7시 30분까지 게더 들어오세요~\n오늘 팀 아침 8시에 팀 회의 있습니다.\n팀원들 7시 30분까지 게더 들어오세요~\n오늘 팀 아침 8시에 팀 회의 있습니다.\n팀원들 7시 30분까지 게더 들어오세요~"/>
+                android:textSize="6pt"
+                android:textColor="@color/black"
+                android:text="팀원분들 좋은 아침입니다! :)"/>
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textSize="6pt"
+                android:textColor="#5A5A5A"
+                android:background="@null"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
+</ScrollView>

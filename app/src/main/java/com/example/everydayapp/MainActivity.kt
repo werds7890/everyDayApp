@@ -4,9 +4,13 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
     private lateinit var writingResult: ActivityResultLauncher<Intent>
@@ -14,13 +18,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val intent2 = Intent()
-        val githubBtn = findViewById<ImageButton>(R.id.github)
-        val slackBtn = findViewById<ImageButton>(R.id.slack)
-        val notionBtn = findViewById<ImageButton>(R.id.notion)
-        val pgBtn = findViewById<ImageButton>(R.id.programmers)
-        val myPageBtn = findViewById<ImageButton>(R.id.myPage)
-        val writingBtn = findViewById<ImageButton>(R.id.writing)
+
+        val githubBtn=findViewById<ImageButton>(R.id.github)
+        val slackBtn=findViewById<ImageButton>(R.id.slack)
+        val notionBtn=findViewById<ImageButton>(R.id.notion)
+        val pgBtn=findViewById<ImageButton>(R.id.programmers)
+        val myPageBtn=findViewById<ImageButton>(R.id.myPage)
+        val writingBtn=findViewById<ImageButton>(R.id.writing)
+
 
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(""))
 
@@ -44,9 +49,14 @@ class MainActivity : AppCompatActivity() {
             intent.setClass(this, TeamActivity::class.java)
             startActivity(intent)
         }
+
+        writingResultComplete()
+
         writingBtn.setOnClickListener {
-            intent.setClass(this, WritingActivity::class.java)
-            startActivity(intent)
+
+            intent.setClass(this,WritingActivity::class.java)
+            writingResult.launch(intent)
+
         }
     }
 
@@ -71,6 +81,22 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("mbti", "INTP")
             intent.putExtra("좌우명", "좋은 일하자")
             startActivity(intent)
+        }
+    }
+
+    private fun writingResultComplete() {
+        val write=findViewById<TextView>(R.id.realWrite)
+        val name=findViewById<TextView>(R.id.realName)
+
+        writingResult=registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) {
+            result -> if(result.resultCode== RESULT_OK) {
+                val write2=result.data?.getStringExtra("writing") ?:"익명"
+                val name2=result.data?.getStringExtra("nickname") ?:"글을 입력해주세요."
+                write.setText(write2)
+                name.setText(name2)
+        }
         }
     }
 

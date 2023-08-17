@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/nameEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
@@ -73,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/complete">
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/writingEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
