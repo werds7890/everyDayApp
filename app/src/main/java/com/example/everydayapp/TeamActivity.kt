@@ -6,12 +6,21 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
+import org.w3c.dom.Text
 
 class TeamActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_team)
+
+        val myPgTeamName=findViewById<TextView>(R.id.myPageTeamName)
+        val myPgId=findViewById<TextView>(R.id.myPageId)
+        val myPgMotto=findViewById<TextView>(R.id.myPageMotto)
+
+        myPgId.setText(intent.getStringExtra("idData"))
+        myPgTeamName.setText(intent.getStringExtra("teamNameData"))
+        myPgMotto.setText(intent.getStringExtra("motto"))
 
         val editBtn = findViewById<ImageButton>(R.id.editBtn)
         val saveBtn = findViewById<ImageButton>(R.id.saveBtn)

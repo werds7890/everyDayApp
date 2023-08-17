@@ -27,19 +27,6 @@ class LoginPage : AppCompatActivity() {
         dataToIntent.putExtra("idData",idData)
         dataToIntent.putExtra("teamNameData",teamNameData)
 
-        loginIdEditText.setText(idData)
-        val idDataToIntent = Intent(this, MainActivity::class.java)
-        idDataToIntent.putExtra("dataFromSignUpPage",idData)
-
-
-        //teamName data 받기
-        val teamNameData = intent.getStringExtra("TeamNamedataFromSignUpPage")
-        //
-        val teamNameToIntent = Intent(this, MainActivity::class.java)
-        teamNameToIntent.putExtra("dataFromSignUpPage",teamNameData)
-
-
-
         loginBtn.setOnClickListener {
             val loginId = loginIdEditText.text.toString()
             val loginPw = loginPwEditText.text.toString()
@@ -52,7 +39,6 @@ class LoginPage : AppCompatActivity() {
                 Toast.makeText(this, "로그인 성공!", Toast.LENGTH_SHORT).show()
                 //intent 메인으로 넘어가기 추가.
                 startActivity(dataToIntent)
-
             }
         }
 
