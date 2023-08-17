@@ -19,8 +19,14 @@ class LoginPage : AppCompatActivity() {
         val loginIdEditText = findViewById<EditText>(R.id.editId)
         val loginPwEditText = findViewById<EditText>(R.id.editPw)
 
-        //Id data 받기
+        //Id data 받기, teamNameData받기
         val idData = intent.getStringExtra("dataFromSignUpPage")
+        val teamNameData = intent.getStringExtra("TeamNamedataFromSignUpPage")
+        loginIdEditText.setText(idData)
+        val dataToIntent = Intent(this, MainActivity::class.java)
+        dataToIntent.putExtra("idData",idData)
+        dataToIntent.putExtra("teamNameData",teamNameData)
+
         loginIdEditText.setText(idData)
         val idDataToIntent = Intent(this, MainActivity::class.java)
         idDataToIntent.putExtra("dataFromSignUpPage",idData)
@@ -44,11 +50,8 @@ class LoginPage : AppCompatActivity() {
                 Toast.makeText(this, "비밀번호를 확인해 주세요!", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "로그인 성공!", Toast.LENGTH_SHORT).show()
-
-
                 //intent 메인으로 넘어가기 추가.
-                val intoMainIntent = Intent(this, MainActivity::class.java)
-                startActivity(intoMainIntent)
+                startActivity(dataToIntent)
 
             }
         }

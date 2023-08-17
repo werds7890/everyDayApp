@@ -80,12 +80,8 @@ class SignUpPage : AppCompatActivity() {
                     Toast.makeText(this, "회원가입 완료!", Toast.LENGTH_SHORT).show()
                     val signUpIntent = Intent(this, LoginPage::class.java)
                     signUpIntent.putExtra("dataFromSignUpPage",signUpId)
+                    signUpIntent.putExtra("TeamNamedataFromSignUpPage",signUpTeamName)
                     startActivity(signUpIntent)
-
-                    val signUpIntents = Intent(this, LoginPage::class.java)
-                    signUpIntents.putExtra("TeamNamedataFromSignUpPage",signUpTeamName)
-                    startActivity(signUpIntents)
-
                 }
             }
         }
