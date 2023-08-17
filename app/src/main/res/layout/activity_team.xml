@@ -12,11 +12,12 @@
         android:layout_height="180dp"
         android:background="@drawable/square_box"
         android:gravity="center">
+
         <ImageView
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:src="@drawable/pikachu"
-            android:layout_gravity="center" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/hairbear" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +32,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/everytime"/>
+                android:src="@drawable/everycustom"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,7 +46,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/everytime"/>
+                android:src="@drawable/everycustom"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,7 +60,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/everytime"/>
+                android:src="@drawable/everycustom"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
