@@ -9,7 +9,7 @@
     android:padding="20dp"
     tools:context=".Detail">
 
-    
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -107,6 +107,12 @@
                     android:text="게시물"
                     android:textSize="18dp"
                     android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/topEditbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    app:srcCompat="@android:drawable/ic_menu_edit" />
 
             </LinearLayout>
 
