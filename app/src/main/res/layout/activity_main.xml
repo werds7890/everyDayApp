@@ -46,11 +46,11 @@
             android:text="조이름"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+            app:layout_constraintEnd_toStartOf="@+id/myPage"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/myPage"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:contentDescription="마이페이지 버튼"
@@ -130,20 +130,20 @@
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/github"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
-            android:contentDescription="github"
+            android:contentDescription="githubimg"
             android:scaleType="fitCenter"
             android:src="@drawable/github"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/imageButton9"
+            android:id="@+id/slack"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginStart="16dp"
@@ -151,12 +151,12 @@
             android:background="@android:color/transparent"
             android:contentDescription="slack"
             android:scaleType="fitCenter"
-            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintStart_toEndOf="@+id/github"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/slack" />
 
         <ImageButton
-            android:id="@+id/imageButton10"
+            android:id="@+id/notion"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginStart="16dp"
@@ -164,12 +164,12 @@
             android:background="@android:color/transparent"
             android:contentDescription="notion"
             android:scaleType="fitCenter"
-            app:layout_constraintStart_toEndOf="@+id/imageButton9"
+            app:layout_constraintStart_toEndOf="@+id/slack"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/notion" />
 
         <ImageButton
-            android:id="@+id/imageButton11"
+            android:id="@+id/programmers"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginStart="16dp"
@@ -177,7 +177,7 @@
             android:background="@android:color/transparent"
             android:contentDescription="programmers"
             android:scaleType="fitCenter"
-            app:layout_constraintStart_toEndOf="@+id/imageButton10"
+            app:layout_constraintStart_toEndOf="@+id/notion"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/programmars" />
 
@@ -189,7 +189,7 @@
             android:layout_marginTop="8dp"
             android:text="github"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+            app:layout_constraintTop_toBottomOf="@+id/github" />
 
         <TextView
             android:id="@+id/textView5"
@@ -199,7 +199,7 @@
             android:layout_marginTop="8dp"
             android:text="slack"
             app:layout_constraintStart_toEndOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
+            app:layout_constraintTop_toBottomOf="@+id/slack" />
 
         <TextView
             android:id="@+id/textView6"
@@ -209,7 +209,7 @@
             android:layout_marginTop="8dp"
             android:text="notion"
             app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton10" />
+            app:layout_constraintTop_toBottomOf="@+id/notion" />
 
         <TextView
             android:id="@+id/textView9"
@@ -219,7 +219,7 @@
             android:layout_marginTop="8dp"
             android:text="programmers"
             app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton11" />
+            app:layout_constraintTop_toBottomOf="@+id/programmers" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -255,7 +255,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
-        android:text="게시물 작성"
+        android:text="한마디"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
@@ -270,7 +270,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        android:contentDescription="board"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
