@@ -24,14 +24,14 @@ class LoginPage : AppCompatActivity() {
         loginIdEditText.setText(idData)
         val idDataToIntent = Intent(this, MainActivity::class.java)
         idDataToIntent.putExtra("dataFromSignUpPage",idData)
-        startActivity(idDataToIntent)
+
 
         //teamName data 받기
         val teamNameData = intent.getStringExtra("TeamNamedataFromSignUpPage")
         //
         val teamNameToIntent = Intent(this, MainActivity::class.java)
         teamNameToIntent.putExtra("dataFromSignUpPage",teamNameData)
-        startActivity(teamNameToIntent)
+
 
 
         loginBtn.setOnClickListener {
