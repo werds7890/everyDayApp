@@ -8,13 +8,13 @@
         <string name="TeamName">Team Name</string>
         <string name="login">로그인</string>
         <string name="signup">회원가입</string>
-        <string name="이름_황일규">이름: 황일규</string>
+        <string name="name_HI">이름: 황일규</string>
         <string name="MBTI_ENFJ">MBTI:ENFJ</string>
-        <string name="i_안녕하세요_잘부탁드립니다">간단한 소개: 안녕하세요! 잘부탁드립니다.</string>
-        <string name="게시물">게시물</string>
-        <string name="안녕하세요"> 안녕하세요!</string>
-        <string name="감사합니다"> 감사합니다.</string>
-        <string name="조이름">조이름</string>
+        <string name="i_nice_meet">간단한 소개: 안녕하세요! 잘부탁드립니다.</string>
+        <string name="post">게시물</string>
+        <string name="hello"> 안녕하세요!</string>
+        <string name="thanks"> 감사합니다.</string>
+        <string name="teamname">조이름</string>
         <string name="github">github</string>
         <string name="slack">slacsk</string>
         <string name="programmers">programmers</string>
@@ -37,5 +37,7 @@
         <string name="글쓰기">글 쓰기</string>
         <string name="닉네임">닉네임</string>
         <string name="닉네임을입력하세요">닉네임을 입력하세요.</string>
+        <string name="이름을입력하세요">이름을 입력하세요</string>
+        <string name="MBTI를입력하세요">MBTI를 입력하세요</string>
 
 </resources>

@@ -9,67 +9,6 @@
     android:padding="20dp"
     tools:context=".Detail">
     <LinearLayout
-        android:id="@+id/User_Introduce"
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/square_box"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/Chunshik"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"/>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/Introduction"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:text="@string/이름_황일규"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/mbti"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:text="@string/MBTI_ENFJ"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/motto"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:text="@string/i_안녕하세요_잘부탁드립니다"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
-
-    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -95,159 +34,135 @@
                 android:contentDescription="@null"
                 android:layout_height="match_parent"/>
 
+            <LinearLayout
+                android:id="@+id/Introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
 
-                <LinearLayout
-                    android:id="@+id/Introduction"
+                <TextView
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:hint="moto"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/name"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:text=""
-                        android:hint="@string/input_name"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/mbti"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:hint="@string/input_MBTI"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/mbti"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:text=""
-                        android:hint="@string/input_MBTI"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/motto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/input_moto"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/motto"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:hint="@string/input_moto"
-                        android:text=""
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+            </LinearLayout>
 
-                </LinearLayout>
-            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Mother_layout"
+            android:layout_width="match_parent"
+            android:layout_height="900dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            tools:ignore="ExtraText"
+            tools:layout_editor_absoluteX="24dp">
+
+            // 첫번째 게시물
 
             <LinearLayout
-                android:id="@+id/Mother_layout"
+                android:id="@+id/first_headline"
                 android:layout_width="match_parent"
-                android:layout_height="900dp"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                tools:ignore="ExtraText"
-                tools:layout_editor_absoluteX="24dp">
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start"
+                    android:src="@drawable/everycustom"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="0dp"
+                    android:text="@string/post"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/Edit_Button1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="140dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@null"
+                    app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                <ImageButton
+                    android:id="@+id/Save_Button1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@null"
+                    app:srcCompat="@android:drawable/ic_menu_save" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/First_textlayout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/square_box"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
                 <TextView
                     android:id="@+id/firsttext"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/안녕하세요"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello"
                     android:textColor="#5A5A5A"
-                    android:textSize="6pt" />
+                    android:textSize="7pt" />
 
-                // 첫번째 게시물
-
-
-                <LinearLayout
-                    android:id="@+id/first_headline"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="start"
-                        android:src="@drawable/everycustom"
-                        android:contentDescription="@null" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="0dp"
-                        android:text="@string/post"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <ImageButton
-                        android:id="@+id/Edit_Button1"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginStart="140dp"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@null"
-                        app:srcCompat="@android:drawable/ic_menu_edit" />
-
-                    <ImageButton
-                        android:id="@+id/Save_Button1"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@null"
-                        app:srcCompat="@android:drawable/ic_menu_save" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/First_textlayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="0dp"
-                    android:background="@drawable/square_box"
-                    android:orientation="vertical"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-                    <TextView
-                        android:id="@+id/firsttext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hello"
-                        android:textColor="#5A5A5A"
-                        android:textSize="7pt" />
-
-                    <EditText
-                        android:id="@+id/editText1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:textColor="#5A5A5A"
-                        android:textSize="7pt"
-                        android:inputType="text"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/Second_headline"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@null"
                     android:textColor="#5A5A5A"
-                    android:textSize="6pt" />
-            </LinearLayout>
+                    android:textSize="7pt"
+                    android:inputType="text"/>
 
-            // 두번째 게시물
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/Second_headline"
@@ -260,6 +175,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
+                    android:contentDescription="@null"
                     android:src="@drawable/everycustom" />
 
                 <TextView
@@ -267,149 +183,49 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_margin="0dp"
-                    android:text="@string/게시물"
-                    android:textSize="18dp"
+                    android:text="@string/post"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/Edit_Button2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="140dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@null"
+                    app:srcCompat="@android:drawable/ic_menu_edit" />
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center_vertical"
-                        android:contentDescription="@null"
-                        android:src="@drawable/everycustom" />
+                <ImageButton
+                    android:id="@+id/Save_Button2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@null"
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="0dp"
-                        android:text="@string/post"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                    app:srcCompat="@android:drawable/ic_menu_save" />
 
-                    <ImageButton
-                        android:id="@+id/Edit_Button2"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginStart="140dp"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@null"
-                        app:srcCompat="@android:drawable/ic_menu_edit" />
+            </LinearLayout>
 
-                    <ImageButton
-                        android:id="@+id/Save_Button2"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@null"
-
-                        app:srcCompat="@android:drawable/ic_menu_save" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/linearLayout5"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="0dp"
-                    android:background="@drawable/square_box"
-                    android:orientation="vertical"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                    <TextView
-                        android:id="@+id/secondtext"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/thankyou"
-                        android:textColor="#5A5A5A"
-                        android:textSize="7pt" />
-
-                    <EditText
-                        android:id="@+id/editText2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        android:background="@null"
-                        android:textColor="#5A5A5A"
-                        android:textSize="7pt"
-                        android:inputType="text"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/Third_headline"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="bottom"
-                        android:contentDescription="@null"
-                        android:src="@drawable/everycustom" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="0dp"
-                        android:text="@string/post"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <ImageButton
-                        android:id="@+id/Edit_Button3"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginStart="140dp"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@null"
-                        app:srcCompat="@android:drawable/ic_menu_edit" />
-
-                    <ImageButton
-                        android:id="@+id/Save_Button3"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="bottom"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@null"
-                        app:srcCompat="@android:drawable/ic_menu_save" />
-
-                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/square_box"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
-                    android:id="@+id/Thirdtext"
-                    android:layout_width="match_parent"
-                    android:layout_height="150sp"
-                    android:text="@string/bye"
-                    android:textColor="#5A5A5A"
-                    android:textSize="7pt"
-                    android:background="@drawable/square_box"/>
-
-                <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/secondtext"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
-                    android:layout_margin="20dp"
-                    android:background="@null"
-                    android:text="@string/감사합니다"
+                    android:text="@string/thankyou"
                     android:textColor="#5A5A5A"
-                    android:textSize="7pt"
-                    android:inputType="text"/>
+                    android:textSize="7pt" />
 
                 <EditText
                     android:id="@+id/editText2"
@@ -418,7 +234,8 @@
                     android:layout_margin="20dp"
                     android:background="@null"
                     android:textColor="#5A5A5A"
-                    android:textSize="6pt" />
+                    android:textSize="7pt"
+                    android:inputType="text"/>
 
             </LinearLayout>
 
@@ -432,7 +249,8 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="bottom"
+                    android:contentDescription="@null"
                     android:src="@drawable/everycustom" />
 
                 <TextView
@@ -440,45 +258,52 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_margin="0dp"
-                    android:text="@string/게시물"
-                    android:textSize="18dp"
+                    android:text="@string/post"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/Edit_Button3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
                     android:layout_marginStart="140dp"
-                    android:background="@color/white"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@null"
                     app:srcCompat="@android:drawable/ic_menu_edit" />
 
                 <ImageButton
                     android:id="@+id/Save_Button3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
                     android:background="@android:color/transparent"
+                    android:contentDescription="@null"
                     app:srcCompat="@android:drawable/ic_menu_save" />
 
             </LinearLayout>
 
             <TextView
+                android:id="@+id/Thirdtext"
+                android:layout_width="match_parent"
+                android:layout_height="150sp"
+                android:text="@string/bye"
+                android:textColor="#5A5A5A"
+                android:textSize="7pt"
+                android:background="@drawable/square_box"/>
+
+            <EditText
+                android:id="@+id/editText3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/감사합니다"
+                android:layout_margin="20dp"
+                android:background="@null"
                 android:textColor="#5A5A5A"
-                android:textSize="6pt" />
-
+                android:textSize="7pt"
+                android:inputType="text"/>
 
         </LinearLayout>
-
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
     </LinearLayout>
 </ScrollView>
 
-
+    ```
