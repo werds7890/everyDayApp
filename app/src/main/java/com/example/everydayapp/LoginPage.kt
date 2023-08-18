@@ -39,6 +39,7 @@ class LoginPage : AppCompatActivity() {
                 Toast.makeText(this, "로그인 성공!", Toast.LENGTH_SHORT).show()
                 //intent 메인으로 넘어가기 추가.
                 startActivity(dataToIntent)
+                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
             }
         }
 
@@ -46,6 +47,7 @@ class LoginPage : AppCompatActivity() {
         signUpBtn.setOnClickListener {
             val signUpIntent = Intent(this, SignUpPage::class.java)
             startActivity(signUpIntent)
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
         }
     }
 }

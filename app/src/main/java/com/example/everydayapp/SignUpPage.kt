@@ -82,6 +82,7 @@ class SignUpPage : AppCompatActivity() {
                     signUpIntent.putExtra("dataFromSignUpPage",signUpId)
                     signUpIntent.putExtra("TeamNamedataFromSignUpPage",signUpTeamName)
                     startActivity(signUpIntent)
+                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
                 }
             }
         }
@@ -89,6 +90,7 @@ class SignUpPage : AppCompatActivity() {
         cencelBtn.setOnClickListener {
             Log.d("cencel_Button","cencel Button Click")
             finish()
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
         }
 
     }
