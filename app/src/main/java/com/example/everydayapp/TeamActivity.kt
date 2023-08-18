@@ -17,10 +17,12 @@ class TeamActivity : AppCompatActivity() {
         val myPgTeamName=findViewById<TextView>(R.id.myPageTeamName)
         val myPgId=findViewById<TextView>(R.id.myPageId)
         val myPgMotto=findViewById<TextView>(R.id.myPageMotto)
+        val myPgTeamName2=findViewById<TextView>(R.id.myPageTeamName2)
 
         myPgId.setText(intent.getStringExtra("idData"))
         myPgTeamName.setText(intent.getStringExtra("teamNameData"))
         myPgMotto.setText(intent.getStringExtra("motto"))
+        myPgTeamName2.setText(intent.getStringExtra("teamNameData"))
 
         val editBtn = findViewById<ImageButton>(R.id.editBtn)
         val saveBtn = findViewById<ImageButton>(R.id.saveBtn)

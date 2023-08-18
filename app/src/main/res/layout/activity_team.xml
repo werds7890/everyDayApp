@@ -42,12 +42,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Team Name : "/>
             <TextView
                 android:id="@+id/myPageTeamName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textColor="#333333"
                 android:hint="팀명을 입력해주세요."/>
         </LinearLayout>
 
@@ -67,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="ID : " />
 
             <TextView
@@ -74,6 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textColor="#333333"
                 android:hint="아이디를 입력해주세요." />
         </LinearLayout>
 
@@ -90,12 +94,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="팀 좌우명 : "/>
             <TextView
                 android:id="@+id/myPageMotto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textColor="#333333"
                 android:hint="팀 좌우명을 입력해주세요."/>
         </LinearLayout>
     </LinearLayout>
@@ -123,9 +129,11 @@
                     app:civ_border_color="@color/black"
                     app:civ_border_overlay="true"/>
                 <TextView
+                    android:id="@+id/myPageTeamName2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="부끄럽조"
+                    android:hint="TeamName"
+                    android:textColor="#333333"
                     android:textSize="8pt"
                     android:textStyle="bold"
                     android:layout_margin="5dp"/>
@@ -159,7 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:textSize="6pt"
+                android:textSize="7pt"
                 android:textColor="@color/black"
                 android:text="팀원분들 좋은 아침입니다! :)"/>
             <EditText
