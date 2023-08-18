@@ -42,13 +42,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:text="Team Name : "/>
+                android:text="@string/TeamName2"/>
             <TextView
                 android:id="@+id/myPageTeamName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="팀명을 입력해주세요."/>
+                android:hint="@string/팀명을입력해주세요"/>
         </LinearLayout>
 
         <LinearLayout
@@ -67,14 +67,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:text="@string/ID2"/>
                 android:text="ID : " />
-
+          
             <TextView
                 android:id="@+id/myPageId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:hint="@string/아이디를입력해주세요"/>
                 android:hint="아이디를 입력해주세요." />
+
         </LinearLayout>
 
         <LinearLayout
@@ -90,13 +93,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:text="팀 좌우명 : "/>
+                android:text="@string/좌우명"/>
+                
+
             <TextView
                 android:id="@+id/myPageMotto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="팀 좌우명을 입력해주세요."/>
+                android:hint="@string/좌우명을입력해주세요"/>
         </LinearLayout>
     </LinearLayout>
     <ScrollView
@@ -125,7 +130,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="부끄럽조"
+                    android:text="@string/부끄럽조"
                     android:textSize="8pt"
                     android:textStyle="bold"
                     android:layout_margin="5dp"/>
@@ -161,7 +166,7 @@
                 android:layout_margin="20dp"
                 android:textSize="6pt"
                 android:textColor="@color/black"
-                android:text="팀원분들 좋은 아침입니다! :)"/>
+                android:text="@string/좋은아침"/>
             <EditText
                 android:id="@+id/editText"
                 android:layout_width="wrap_content"
