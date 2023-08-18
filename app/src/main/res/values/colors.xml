@@ -5,4 +5,7 @@
     <color name="gray_300">#E0E0E0</color>
     <color name="gray_400">#BDBDBD</color>
     <color name="red">#C62828</color>
+    <color name="dark_gray">#252525</color>
+    <color name="round2_text">#191919</color>
+    <color name="square_stroke">#989898</color>
 </resources>
