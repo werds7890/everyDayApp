@@ -21,12 +21,12 @@ class Detail : AppCompatActivity() {
         val mbti=findViewById<TextView>(R.id.mbti)
         val motto=findViewById<TextView>(R.id.motto)
         val detailImg=findViewById<ImageButton>(R.id.detailImage)
-        val firsttext =findViewById<TextView>(R.id.firsttext)
+        val firsttext =findViewById<TextView>(R.id.firsttext)   //textview
         val secondtext=findViewById<TextView>(R.id.secondtext)
-        val firstEdittext=findViewById<EditText>(R.id.editText1)
+        val firstEdittext=findViewById<EditText>(R.id.editText1)    //edittext
         val secondEdittext=findViewById<EditText>(R.id.editText2)
-        val firstedit =findViewById<ImageButton>(R.id.Edit_Button1)
-        val firstsave = findViewById<ImageButton>(R.id.Save_Button1)
+        val firstedit =findViewById<ImageButton>(R.id.Edit_Button1) //edit btn
+        val firstsave = findViewById<ImageButton>(R.id.Save_Button1)   //save btn
         val secondedit =findViewById<ImageButton>(R.id.Edit_Button2)
         val secondsave = findViewById<ImageButton>(R.id.Save_Button2)
 
@@ -46,11 +46,12 @@ class Detail : AppCompatActivity() {
             "이름 : 황일규" -> detailImg.setImageResource(R.drawable.leejamong)
         }
 
-        firsttext.visibility
+
 
         firstedit.setOnClickListener {
             firsttext.visibility = View.GONE
             firstEdittext.visibility = View.VISIBLE
+            firstEdittext.setText(firsttext.text)
         }
         firstsave.setOnClickListener {
             firsttext.visibility = View.VISIBLE
@@ -58,7 +59,7 @@ class Detail : AppCompatActivity() {
             firsttext.text = firstEdittext.text
         }
 
-        secondtext.visibility
+
 
         secondedit.setOnClickListener {
             secondtext.visibility = View.GONE
