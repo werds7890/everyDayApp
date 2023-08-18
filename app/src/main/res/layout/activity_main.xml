@@ -65,7 +65,7 @@
             android:background="@android:color/transparent"
             android:contentDescription="마이페이지 버튼"
             android:scaleType="fitCenter"
-            android:src="@drawable/people"
+            android:src="@drawable/human"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -215,6 +215,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="26dp"
             android:layout_marginTop="8dp"
+            android:textColor="@color/round2_text"
             android:text="github"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/github" />
@@ -225,6 +226,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="42dp"
             android:layout_marginTop="8dp"
+            android:textColor="@color/round2_text"
             android:text="slack"
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/slack" />
@@ -235,6 +237,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="39dp"
             android:layout_marginTop="8dp"
+            android:textColor="@color/round2_text"
             android:text="notion"
             app:layout_constraintStart_toEndOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/notion" />
@@ -245,6 +248,7 @@
             android:layout_height="35dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="8dp"
+            android:textColor="@color/round2_text"
             android:text="programmers"
             app:layout_constraintStart_toEndOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/programmers" />
@@ -266,6 +270,7 @@
             android:id="@+id/realName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/round2_text"
             android:text="익명"
             android:paddingRight="20dp"
             />
@@ -274,6 +279,7 @@
             android:id="@+id/realWrite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/round2_text"
             android:text="글을 입력해주세요." />
     </LinearLayout>
 
@@ -283,6 +289,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
+        android:textColor="@color/dark_gray"
         android:text="한마디"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

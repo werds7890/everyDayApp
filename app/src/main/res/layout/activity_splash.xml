@@ -22,6 +22,6 @@
         android:layout_height="wrap_content"
         android:text="에브리데이!"
         android:textSize="13pt"
-        android:textColor="#C02B20"
+        android:textColor="@color/red"
         style="@style/font2"/>
 </LinearLayout>
