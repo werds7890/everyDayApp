@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,290 +8,294 @@
     android:descendantFocusability="blocksDescendants"
     android:padding="20dp"
     tools:context=".Detail">
-
-
     <LinearLayout
-        android:id="@+id/User_Introduce"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/square_box"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageButton
-            android:layout_margin="7dp"
-            android:id="@+id/detailImage"
-            android:layout_width="150dp"
-            android:scaleType="fitXY"
-            android:background="@android:color/transparent"
-            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/User_Introduce"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/square_box"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_margin="7dp"
+                android:id="@+id/detailImage"
+                android:layout_width="150dp"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:layout_height="match_parent"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/Introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:hint="이름을 입력하세요."
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mbti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:hint="MBTI를 입력하세요."
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/motto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:hint="좌우명을 입력하세요."
+                        android:text=""
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
             <LinearLayout
-                android:id="@+id/Introduction"
+                android:id="@+id/Mother_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:text=""
-                    android:hint="이름을 입력하세요."
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/mbti"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:text=""
-                    android:hint="MBTI를 입력하세요."
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/motto"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:hint="좌우명을 입력하세요."
-                    android:text=""
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="210dp"
-        tools:layout_editor_absoluteX="40dp">
-
-        <LinearLayout
-            android:id="@+id/Mother_layout"
-            android:layout_width="match_parent"
-            android:layout_height="900dp"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            tools:ignore="ExtraText"
-            tools:layout_editor_absoluteX="24dp">
-
-            // 첫번째 게시물
-
-            <LinearLayout
-                android:id="@+id/first_headline"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="start"
-                    android:src="@drawable/everycustom" />
-                  
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="0dp"
-                    android:text="게시물"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <ImageButton
-                    android:id="@+id/Edit_Button1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="140dp"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@android:drawable/ic_menu_edit" />
-
-                <ImageButton
-                    android:id="@+id/Save_Button1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@android:drawable/ic_menu_save" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/First_textlayout"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/square_box"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-                <TextView
-                    android:id="@+id/firsttext"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="안녕하세요!!"
-                    android:textColor="#5A5A5A"
-                    android:textSize="6pt" />
-
-                <EditText
-                    android:id="@+id/editText1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:background="@null"
-                    android:textColor="#5A5A5A"
-                    android:textSize="6pt" />
-            </LinearLayout>
-
-            // 두번째 게시물
-
-            <LinearLayout
-                android:id="@+id/Second_headline"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="900dp"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/everycustom" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="0dp"
-                    android:text="게시물"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <ImageButton
-                    android:id="@+id/Edit_Button2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="140dp"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@android:drawable/ic_menu_edit" />
-
-                <ImageButton
-                    android:id="@+id/Save_Button2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@android:drawable/ic_menu_save" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout5"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/square_box"
                 android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                tools:ignore="ExtraText"
+                tools:layout_editor_absoluteX="24dp">
+
+                // 첫번째 게시물
+
+                <LinearLayout
+                    android:id="@+id/first_headline"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="start"
+                        android:src="@drawable/everycustom" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="0dp"
+                        android:text="게시물"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/Edit_Button1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="140dp"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                    <ImageButton
+                        android:id="@+id/Save_Button1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@android:drawable/ic_menu_save" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/First_textlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/square_box"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                    <TextView
+                        android:id="@+id/firsttext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="안녕하세요!!"
+                        android:textColor="@color/black"
+                        android:textSize="6pt" />
+
+                    <EditText
+                        android:id="@+id/editText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textColor="#5A5A5A"
+                        android:textSize="6pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Second_headline"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/everycustom" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="0dp"
+                        android:text="게시물"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/Edit_Button2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="140dp"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                    <ImageButton
+                        android:id="@+id/Save_Button2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@android:drawable/ic_menu_save" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/square_box"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/secondtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=" 감사합니다"
+                        android:textColor="#5A5A5A"
+                        android:textSize="6pt" />
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:background="@null"
+                        android:textColor="#5A5A5A"
+                        android:textSize="6pt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Third_headline"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/everycustom" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="0dp"
+                        android:text="게시물"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/Edit_Button3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="140dp"
+                        android:background="@color/white"
+                        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                    <ImageButton
+                        android:id="@+id/Save_Button3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@android:drawable/ic_menu_save" />
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/secondtext"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text=" 감사합니다"
                     android:textColor="#5A5A5A"
                     android:textSize="6pt" />
 
-                <EditText
-                    android:id="@+id/editText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:background="@null"
-                    android:textColor="#5A5A5A"
-                    android:textSize="6pt" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/Third_headline"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+        </ScrollView>
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/everycustom" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="0dp"
-                    android:text="게시물"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <ImageButton
-                    android:id="@+id/Edit_Button3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="140dp"
-                    android:background="@color/white"
-                    app:srcCompat="@android:drawable/ic_menu_edit" />
-
-                <ImageButton
-                    android:id="@+id/Save_Button3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@android:drawable/ic_menu_save" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text=" 감사합니다"
-                android:textColor="#5A5A5A"
-                android:textSize="6pt" />
+    </LinearLayout>
 
 
-        </LinearLayout>
 
-    </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 
 
