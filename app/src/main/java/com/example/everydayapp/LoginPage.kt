@@ -21,8 +21,11 @@ class LoginPage : AppCompatActivity() {
 
         //Id data 받기, teamNameData받기
         val idData = intent.getStringExtra("dataFromSignUpPage")
+        val PwData = intent.getStringExtra("dataPw")
         val teamNameData = intent.getStringExtra("TeamNamedataFromSignUpPage")
         loginIdEditText.setText(idData)
+        loginPwEditText.setText(PwData)
+
         val dataToIntent = Intent(this, MainActivity::class.java)
         dataToIntent.putExtra("idData",idData)
         dataToIntent.putExtra("teamNameData",teamNameData)

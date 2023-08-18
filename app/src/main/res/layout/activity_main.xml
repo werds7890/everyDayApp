@@ -26,8 +26,10 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/everyday"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:layout_marginTop="4dp"
-            android:text="에브리데이"
             android:textColor="@color/red"
             style="@style/font2"
             android:textSize="25sp"
@@ -49,9 +51,12 @@
             style="@style/font2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/조이름"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
-            android:text="조이름"
             android:textColor="@color/red"
             android:textSize="25sp"
             app:layout_constraintEnd_toStartOf="@+id/myPage"
@@ -215,6 +220,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="26dp"
             android:layout_marginTop="8dp"
+            android:text="@string/github"
             android:textColor="@color/round2_text"
             android:text="github"
             app:layout_constraintStart_toStartOf="parent"
@@ -226,6 +232,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="42dp"
             android:layout_marginTop="8dp"
+            android:text="@string/slack"
             android:textColor="@color/round2_text"
             android:text="slack"
             app:layout_constraintStart_toEndOf="@+id/textView3"
@@ -237,6 +244,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="39dp"
             android:layout_marginTop="8dp"
+            android:text="@string/notion"
             android:textColor="@color/round2_text"
             android:text="notion"
             app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -248,6 +256,7 @@
             android:layout_height="35dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="8dp"
+            android:text="@string/programmers"
             android:textColor="@color/round2_text"
             android:text="programmers"
             app:layout_constraintStart_toEndOf="@+id/textView6"
@@ -270,8 +279,8 @@
             android:id="@+id/realName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/익명"
             android:textColor="@color/round2_text"
-            android:text="익명"
             android:paddingRight="20dp"
             />
 
@@ -279,8 +288,9 @@
             android:id="@+id/realWrite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/round2_text"
-            android:text="글을 입력해주세요." />
+            android:text="@string/글을입력해주세요"/>
+            android:textColor="@color/round2_text" />
+
     </LinearLayout>
 
     <TextView
@@ -289,8 +299,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
+        android:text="@string/한마디"
         android:textColor="@color/dark_gray"
-        android:text="한마디"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
