@@ -1,5 +1,6 @@
 package com.example.everydayapp
 
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -19,6 +20,7 @@ class Detail : AppCompatActivity() {
         val name=findViewById<TextView>(R.id.name)
         val mbti=findViewById<TextView>(R.id.mbti)
         val motto=findViewById<TextView>(R.id.motto)
+        val detailImg=findViewById<ImageButton>(R.id.detailImage)
         val firsttext =findViewById<TextView>(R.id.firsttext)
         val secondtext=findViewById<TextView>(R.id.secondtext)
         val firstEdittext=findViewById<EditText>(R.id.editText1)
@@ -32,9 +34,17 @@ class Detail : AppCompatActivity() {
         val mbtiData=intent.getStringExtra("mbti")
         val mottoData=intent.getStringExtra("좌우명")
 
+
         name.setText(nameData)
         mbti.setText(mbtiData)
         motto.setText(mottoData)
+
+        when(nameData){
+            "이름 : 김현걸" -> detailImg.setImageResource(R.drawable.hyeon)
+            "이름 : 황현아" -> detailImg.setImageResource(R.drawable.pika)
+            "이름 : 이지현" -> detailImg.setImageResource(R.drawable.kitty)
+            "이름 : 황일규" -> detailImg.setImageResource(R.drawable.leejamong)
+        }
 
         firsttext.visibility
 

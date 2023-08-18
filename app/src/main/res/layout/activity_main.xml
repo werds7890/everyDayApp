@@ -7,6 +7,7 @@
     tools:context=".MainActivity"
     android:padding="20dp"
     android:orientation="vertical"
+    android:background="@drawable/orange"
     >
 
 
@@ -18,15 +19,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="에브리데이"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textColor="@color/red"
+            style="@style/font2"
+            android:textSize="25sp"
+            android:textStyle=""
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,18 +39,21 @@
             android:id="@+id/imageView"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_marginTop="4dp"
             android:src="@drawable/everycustom"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/teamName"
+            style="@style/font2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
             android:text="조이름"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:textSize="25sp"
             app:layout_constraintEnd_toStartOf="@+id/myPage"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,8 +61,9 @@
             android:id="@+id/myPage"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:contentDescription="마이페이지 버튼"
+            android:layout_marginTop="2dp"
             android:background="@android:color/transparent"
+            android:contentDescription="마이페이지 버튼"
             android:scaleType="fitCenter"
             android:src="@drawable/people"
             app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +98,7 @@
                 android:contentDescription="이미지1"
                 android:onClick="intoDetail"
                 android:scaleType="fitXY"
-                android:src="@drawable/test1"
+                android:src="@drawable/hyeon"
                 app:layout_constraintEnd_toStartOf="@+id/imageButton4"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -103,7 +112,7 @@
                 android:contentDescription="이미지2"
                 android:onClick="intoDetail"
                 android:scaleType="fitXY"
-                android:src="@drawable/test2"
+                android:src="@drawable/pika"
                 app:layout_constraintStart_toEndOf="@+id/imageButton3"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,7 +125,7 @@
                 android:background="@android:color/transparent"
                 android:contentDescription="이미지3"
                 android:scaleType="fitXY"
-                android:src="@drawable/test3"
+                android:src="@drawable/kitty"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageButton3"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -128,7 +137,7 @@
                 android:onClick="intoDetail"
                 android:contentDescription="이미지4"
                 android:scaleType="fitXY"
-                android:src="@drawable/pikachu"
+                android:src="@drawable/leejamong"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageButton3"
                 app:layout_constraintTop_toTopOf="parent"
@@ -142,6 +151,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@drawable/round2"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

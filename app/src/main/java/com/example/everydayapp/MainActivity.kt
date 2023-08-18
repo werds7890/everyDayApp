@@ -54,8 +54,9 @@ class MainActivity : AppCompatActivity() {
             val teamNameData=intent.getStringExtra("teamNameData")
             intentMaster.putExtra("idData",idData)
             intentMaster.putExtra("teamNameData",teamNameData)
-            intentMaster.putExtra("motto","포기란 배추 셀 때나 쓰는 말이다.")
+            intentMaster.putExtra("motto","포기하지 말자!")
             startActivity(intentMaster)
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
         }
 
         writingResultComplete()
@@ -63,30 +64,36 @@ class MainActivity : AppCompatActivity() {
         writingBtn.setOnClickListener {
             intentMaster.setClass(this,WritingActivity::class.java)
             writingResult.launch(intentMaster)
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
         }
     }
     fun intoDetail(view:View) {
         intentMaster.setClass(this,Detail::class.java)
         if(view.getId()==R.id.imageButton3){
-            intentMaster.putExtra("name","춘식이")
-            intentMaster.putExtra("mbti","ISTP")
-            intentMaster.putExtra("좌우명","착하게 살자")
+            intentMaster.putExtra("name","이름 : 김현걸")
+            intentMaster.putExtra("mbti","MBTI : ISTP")
+            intentMaster.putExtra("좌우명","좌우명 : 포기는 배추 셀 때나 쓰는 말이다.")
+
             startActivity(intentMaster)
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
         }else if(view.getId()==R.id.imageButton4){
-            intentMaster.putExtra("name","라이언")
-            intentMaster.putExtra("mbti","ISFP")
-            intentMaster.putExtra("좌우명","열심히 살자")
+            intentMaster.putExtra("name","이름 : 황현아")
+            intentMaster.putExtra("mbti","MBTI : ISFP")
+            intentMaster.putExtra("좌우명","좌우명 : 그냥 살자")
             startActivity(intentMaster)
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
         }else if(view.getId()==R.id.imageButton5){
-            intentMaster.putExtra("name","고양이")
-            intentMaster.putExtra("mbti","INTJ")
-            intentMaster.putExtra("좌우명","그냥 살자")
+            intentMaster.putExtra("name","이름 : 이지현")
+            intentMaster.putExtra("mbti","MBTI : INTJ")
+            intentMaster.putExtra("좌우명","좌우명 : 최선을 다하자")
             startActivity(intentMaster)
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
         }else if(view.getId()==R.id.imageButton6){
-            intentMaster.putExtra("name","오리너구리")
-            intentMaster.putExtra("mbti","ENFJ")
-            intentMaster.putExtra("좌우명","계획적으로 살자")
+            intentMaster.putExtra("name","이름 : 황일규")
+            intentMaster.putExtra("mbti","MBTI : ENFJ")
+            intentMaster.putExtra("좌우명","좌우명 : 노력은 배신하지 않는다.")
             startActivity(intentMaster)
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
         }
     }
 
