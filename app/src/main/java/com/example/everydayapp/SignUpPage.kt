@@ -49,6 +49,9 @@ class SignUpPage : AppCompatActivity() {
                 val signUpId = signUpEditId.text
                 val currentLength = signUpId.length
                 when {
+                    (currentLength == 0) -> {
+                        Toast.makeText(this, "아이디를 사용하실 수 없니다", Toast.LENGTH_SHORT).show()}
+
                     (currentLength <= maxLength) -> {
                         Toast.makeText(this, "아이디를 사용하실 수 있습니다", Toast.LENGTH_SHORT).show() }
                 }
@@ -62,6 +65,10 @@ class SignUpPage : AppCompatActivity() {
             val signUpId = signUpEditId.text.toString()
             val signUpPw = signUpEditPw.text.toString()
             val signUpTeamName = signUpEditTeamName.text.toString()
+            var maxLength = 15
+            val signUpId = signUpEditId.text
+            val currentLength = signUpId.length
+
 
             when {
                 (signUpId.isEmpty()) -> {
@@ -80,6 +87,7 @@ class SignUpPage : AppCompatActivity() {
                     Toast.makeText(this, "회원가입 완료!", Toast.LENGTH_SHORT).show()
                     val signUpIntent = Intent(this, LoginPage::class.java)
                     signUpIntent.putExtra("dataFromSignUpPage",signUpId)
+                    signUpIntent.putExtra("dataPw",signUpPw)
                     signUpIntent.putExtra("TeamNamedataFromSignUpPage",signUpTeamName)
                     startActivity(signUpIntent)
                     overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
