@@ -88,8 +88,6 @@
                 tools:ignore="ExtraText"
                 tools:layout_editor_absoluteX="24dp">
 
-                // 첫번째 게시물
-
                 <LinearLayout
                     android:id="@+id/first_headline"
                     android:layout_width="match_parent"

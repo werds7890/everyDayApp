@@ -4,6 +4,7 @@ import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
@@ -34,11 +35,12 @@ class Detail : AppCompatActivity() {
         val mbtiData=intent.getStringExtra("mbti")
         val mottoData=intent.getStringExtra("좌우명")
 
-
         name.setText(nameData)
         mbti.setText(mbtiData)
         motto.setText(mottoData)
 
+
+        
         when(nameData){
             "이름 : 김현걸" -> detailImg.setImageResource(R.drawable.hyeon)
             "이름 : 황현아" -> detailImg.setImageResource(R.drawable.pika)
