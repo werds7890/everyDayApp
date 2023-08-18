@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="협업을 더 편하게!"
-        android:textColor="@color/gray_400"
+        android:textColor="@color/white"
         android:textSize="14sp"
         style="@style/font2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/everyday2" />
+        app:layout_constraintTop_toBottomOf="@+id/everyday2"
+        android:textColor="@color/dark_gray"/>
 
     <EditText
         android:id="@+id/editId2"
@@ -67,7 +68,8 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textId2" />
+        app:layout_constraintTop_toBottomOf="@+id/textId2"
+        android:textColor="@color/dark_gray"/>
 
     <Button
         android:id="@+id/btn_check"
@@ -76,6 +78,7 @@
         android:layout_marginStart="-30dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/red"
+        android:textColor="@color/white"
         android:text="체크"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -95,7 +98,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editId2" />
+        app:layout_constraintTop_toBottomOf="@+id/editId2"
+        android:textColor="@color/dark_gray"/>
 
     <EditText
         android:id="@+id/editPw2"
@@ -107,7 +111,8 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPw2" />
+        app:layout_constraintTop_toBottomOf="@+id/textPw2"
+        android:textColor="@color/dark_gray"/>
 
     <TextView
         android:id="@+id/textTeamName"
@@ -120,7 +125,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPw2" />
+        app:layout_constraintTop_toBottomOf="@+id/editPw2"
+        android:textColor="@color/dark_gray"/>
 
     <EditText
         android:id="@+id/editTeamName"
@@ -131,7 +137,8 @@
         android:layout_marginEnd="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTeamName" />
+        app:layout_constraintTop_toBottomOf="@+id/textTeamName"
+        android:textColor="@color/dark_gray"/>
 
     <Button
         android:id="@+id/btn_Complete"
@@ -140,6 +147,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="150dp"
         android:backgroundTint="@color/red"
+        android:textColor="@color/white"
         android:text="완료"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -154,6 +162,7 @@
         android:layout_marginStart="150dp"
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/red"
+        android:textColor="@color/white"
         android:text="취소"
         android:textSize="14sp"
         android:textStyle="bold"
