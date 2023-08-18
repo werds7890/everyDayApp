@@ -12,14 +12,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="협업을 더 편하게!"
+        android:text="@string/slogan"
         android:textSize="10pt"
         android:textStyle="bold"
         android:textColor="#A8A7A7"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="에브리데이"
+        android:text="@string/everyday"
         android:textStyle="bold"
         android:textSize="13pt"
         android:textColor="#C02B20"/>
