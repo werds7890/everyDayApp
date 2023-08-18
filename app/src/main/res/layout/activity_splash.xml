@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/orange">
 
     <ImageView
         android:layout_width="150dp"
@@ -14,13 +15,14 @@
         android:layout_height="wrap_content"
         android:text="@string/slogan"
         android:textSize="10pt"
-        android:textStyle="bold"
-        android:textColor="#A8A7A7"/>
+        android:textColor="@color/white"
+        style="@style/font2"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/everyday"
         android:textStyle="bold"
         android:textSize="13pt"
-        android:textColor="#C02B20"/>
+        android:textColor="@color/red"
+        style="@style/font2"/>
 </LinearLayout>

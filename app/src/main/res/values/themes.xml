@@ -3,7 +3,17 @@
     <style name="Base.Theme.EveryDayApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:fontFamily">@font/neo</item>
     </style>
 
     <style name="Theme.EveryDayApp" parent="Base.Theme.EveryDayApp" />
+
+    <style name="font">
+<!--        <item name="android:textSize">18dp</item>-->
+        <item name="android:fontFamily">@font/neo</item>
+    </style>
+    <style name="font2">
+        <!--        <item name="android:textSize">18dp</item>-->
+        <item name="android:fontFamily">@font/bitbit</item>
+    </style>
 </resources>
