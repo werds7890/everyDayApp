@@ -3,6 +3,7 @@ package com.example.everydayapp
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
@@ -23,6 +24,8 @@ class TeamActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_team)
+
+        teamSeeMore()
 
         // 아이디, 팀명, 좌우명 가져오기
         val myPgTeamName=findViewById<TextView>(R.id.myPageTeamName)
@@ -63,7 +66,27 @@ class TeamActivity : AppCompatActivity() {
         saveBtn.setOnClickListener {
                 textView.visibility = View.VISIBLE
                 editText.visibility = View.GONE
+                textView.maxLines=1
                 textView.text = editText.text
+                teamSeeMore()
         }
     }
+
+    private fun teamSeeMore(){
+        val teamWriting=findViewById<TextView>(R.id.textView)
+        val seeMore=findViewById<TextView>(R.id.teamSeeMore)
+        teamWriting.post {
+            val lineCount=teamWriting.layout.lineCount
+            Log.v("test","${lineCount}")
+            if(teamWriting.layout.getEllipsisCount(lineCount-1)>0){
+                seeMore.visibility=View.VISIBLE
+
+                seeMore.setOnClickListener {
+                    teamWriting.maxLines=Int.MAX_VALUE
+                    seeMore.visibility=View.GONE
+                }
+            }
+        }
+    }
+
 }
