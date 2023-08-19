@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">EveryDayApp</string>
+    <string name="input_name">이름을 입력하세요.</string>
+    <string name="input_mbti">MBTI를 입력하세요.</string>
+    <string name="input_motto">좌우명을 입력하세요.</string>
+    <string name="more">더보기</string>
+    <string name="post">게시물</string>
+    <string name="morning_1"> 안녕하세요!</string>
+    <string name="thank_you"> 감사합니다:)</string>
+    <string name="goodbye"> 안녕히계세요.</string>
+    <string name="slogan">협업을 더 편하게!</string>
+    <string name="everyday_1">에브리데이!</string>
+    <string name="everyday">에브리데이</string>
+    <string name="id">ID</string>
+    <string name="pw">PW</string>
+    <string name="team_name">Team Name</string>
+    <string name="sign_up">회원가입</string>
+    <string name="complete">완료</string>
+    <string name="cencel">취소</string>
+    <string name="login">로그인</string>
+    <string name="input_id">아이디를 입력해주세요.</string>
+    <string name="check">체크</string>
+    <string name="input_pw">비밀번호를 입력해주세요.</string>
+    <string name="input_team_name">팀이름을 입력해주세요.</string>
+    <string name="anonymous">익명</string>
+    <string name="input_writing"> 글을 입력해 주세요.</string>
+    <string name="comment">한마디</string>
+    <string name="team_motto">팀 좌우명 : </string>
+    <string name="hello_everyone">팀원분들 좋은 아침입니다! 오늘 하루도 화이팅입니다."</string>
+    <string name="writing">글 쓰기</string>
+    <string name="nickname">닉네임</string>
+    <string name="input_nick_name">닉네임을 입력해주세요.</string>
+
+
 </resources>

@@ -55,7 +55,7 @@ class SignUpPage : AppCompatActivity() {
             }
 
             Log.d("Check_Button","Check Button Click")
-            }
+        }
 
 
         compBtn.setOnClickListener {
