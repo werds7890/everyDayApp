@@ -8,13 +8,11 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/everycustom"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_main_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EveryDayApp"
         tools:targetApi="31">
-        <activity
-            android:name=".testPage"
-            android:exported="false" />
+
         <activity
             android:name=".Detail"
             android:exported="false" />

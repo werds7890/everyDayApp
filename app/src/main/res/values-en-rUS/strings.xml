@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EveryDayApp</string>
+    <string name="input_name">Enter your Name.</string>
+    <string name="input_mbti">Enter your MBTI.</string>
+    <string name="input_motto">Enter your Motto.</string>
+    <string name="more">More</string>
+    <string name="post">Post</string>
+    <string name="morning_1">Hello!</string>
+    <string name="thank_you">Thank you.</string>
+    <string name="goodbye">Good Bye.</string>
+    <string name="slogan">More easier!</string>
+    <string name="everyday_1">Everyday!</string>
+    <string name="everyday">Everyday</string>
+    <string name="id">ID</string>
+    <string name="pw">PW</string>
+    <string name="team_name">Team Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="complete">Complete</string>
+    <string name="cencel">Cencel</string>
+    <string name="login">Login</string>
+    <string name="input_id">Enter your ID.</string>
+    <string name="check">Check</string>
+    <string name="input_pw">Enter your PW.</string>
+    <string name="input_team_name">Enter your team name.</string>
+    <string name="anonymous">Anonymous</string>
+    <string name="input_writing">" Enter your Writing."</string>
+    <string name="comment">Comment</string>
+    <string name="team_motto">Team Motto :</string>
+    <string name="hello_everyone">"Hi, everybody. Have a nice day. "</string>
+    <string name="writing">Writing</string>
+    <string name="nickname">Nick Name</string>
+    <string name="input_nick_name">Enter your Nick name.</string>
+</resources>
