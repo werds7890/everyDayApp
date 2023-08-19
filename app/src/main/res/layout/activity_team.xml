@@ -179,7 +179,19 @@
                 android:layout_margin="20dp"
                 android:textSize="7pt"
                 android:textColor="@color/black"
-                android:text="팀원분들 좋은 아침입니다! :)"/>
+                android:text="팀원분들 좋은 아침입니다! 오늘 하루도 화이팅입니다."
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/teamSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="더보기"
+                android:textSize="6pt"
+                android:textColor="#5A5A5A"
+                android:layout_margin="20dp"
+                android:visibility="gone"
+                />
             <EditText
                 android:id="@+id/editText"
                 android:layout_width="wrap_content"
@@ -188,6 +200,7 @@
                 android:textSize="6pt"
                 android:textColor="#5A5A5A"
                 android:background="@null"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
