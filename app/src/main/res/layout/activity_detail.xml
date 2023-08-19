@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="640dp"
+    android:layout_height="match_parent"
     android:background="@drawable/orange"
     android:descendantFocusability="blocksDescendants"
     android:padding="20dp"
@@ -86,7 +86,11 @@
                         />
 
                 </LinearLayout>
+
+        </LinearLayout>
+
             </LinearLayout>
+
          
 
  
@@ -122,15 +126,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_margin="0dp"
+                    android:layout_margin="5dp"
                     android:text="@string/post"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/Edit_Button1"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="bottom"
                     android:layout_marginStart="130dp"
                     android:background="@android:color/transparent"
@@ -139,8 +143,8 @@
 
                 <ImageButton
                     android:id="@+id/Save_Button1"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="bottom"
                     android:background="@android:color/transparent"
                     android:contentDescription="@null"
@@ -164,6 +168,8 @@
                     android:id="@+id/firsttext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
                     android:text="@string/morning_1"
                     android:textColor="@color/black"
                     android:textSize="6pt" />
@@ -172,6 +178,8 @@
                     android:id="@+id/editText1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
                     android:background="@null"
                     android:textColor="#5A5A5A"
                     android:textSize="6pt" />
@@ -194,15 +202,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_margin="0dp"
+                    android:layout_margin="5dp"
                     android:text="@string/post"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/Edit_Button2"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="bottom"
                     android:layout_marginStart="130dp"
                     android:background="@android:color/transparent"
@@ -211,8 +219,8 @@
 
                 <ImageButton
                     android:id="@+id/Save_Button2"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="bottom"
                     android:background="@android:color/transparent"
                     android:contentDescription="@null"
@@ -234,6 +242,8 @@
                     android:id="@+id/secondtext"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
                     android:text="@string/thank_you"
                     android:textColor="#5A5A5A"
                     android:textSize="6pt" />
@@ -242,6 +252,8 @@
                     android:id="@+id/editText2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
                     android:layout_margin="20dp"
                     android:background="@null"
                     android:textColor="#5A5A5A"
@@ -267,15 +279,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_margin="0dp"
+                    android:layout_margin="5dp"
                     android:text="@string/post"
                     android:textSize="18dp"
                     android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/Edit_Button3"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="bottom"
                     android:layout_marginStart="130dp"
                     android:background="@android:color/transparent"
@@ -284,8 +296,8 @@
 
                 <ImageButton
                     android:id="@+id/Save_Button3"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="bottom"
                     android:background="@android:color/transparent"
                     app:srcCompat="@android:drawable/ic_menu_save" />
@@ -305,6 +317,8 @@
                     android:id="@+id/thirdtext"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
                     android:text="@string/goodbye"
                     android:textColor="#5A5A5A"
                     android:textSize="6pt" />
@@ -313,6 +327,8 @@
                     android:id="@+id/editText3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
                     android:background="@null"
                     android:textColor="#5A5A5A"
                     android:textSize="6pt" />
