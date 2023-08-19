@@ -280,7 +280,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/round2_text"
-            android:text="글을 입력해주세요." />
+            android:text="@string/input_writing" />
     </LinearLayout>
 
     <TextView
