@@ -1,15 +1,11 @@
 package com.example.everydayapp
 
-import android.media.Image
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
-import androidx.core.os.persistableBundleOf
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 
 class Detail : AppCompatActivity() {
@@ -25,12 +21,16 @@ class Detail : AppCompatActivity() {
         val detailImg=findViewById<ImageButton>(R.id.detailImage)
         val firsttext =findViewById<TextView>(R.id.firsttext)   //textview
         val secondtext=findViewById<TextView>(R.id.secondtext)
+        val thirdtext =findViewById<TextView>(R.id.thirdtext)
         val firstEdittext=findViewById<EditText>(R.id.editText1)    //edittext
         val secondEdittext=findViewById<EditText>(R.id.editText2)
+        val thirdEdittext =findViewById<EditText>(R.id.editText3)
         val firstedit =findViewById<ImageButton>(R.id.Edit_Button1) //edit btn
-        val firstsave = findViewById<ImageButton>(R.id.Save_Button1)   //save btn
         val secondedit =findViewById<ImageButton>(R.id.Edit_Button2)
-        val secondsave = findViewById<ImageButton>(R.id.Save_Button2)
+        val thirdedit=findViewById<ImageButton>(R.id.Edit_Button3)
+        val firstsave =findViewById<ImageButton>(R.id.Save_Button1)   //save btn
+        val secondsave =findViewById<ImageButton>(R.id.Save_Button2)
+        val thirdsave =findViewById<ImageButton>(R.id.Save_Button3)
 
         val nameData=intent.getStringExtra("name")
         val mbtiData=intent.getStringExtra("mbti")
@@ -61,16 +61,26 @@ class Detail : AppCompatActivity() {
             firsttext.text = firstEdittext.text
         }
 
-
-
         secondedit.setOnClickListener {
             secondtext.visibility = View.GONE
             secondEdittext.visibility = View.VISIBLE
+            secondEdittext.setText(secondtext.text)
         }
         secondsave.setOnClickListener {
             secondtext.visibility = View.VISIBLE
             secondEdittext.visibility = View.GONE
             secondtext.text = secondEdittext.text
+        }
+
+        thirdedit.setOnClickListener {
+            thirdtext.visibility = View.GONE
+            thirdEdittext.visibility = View.VISIBLE
+            thirdEdittext.setText(thirdtext.text)
+        }
+        thirdsave.setOnClickListener {
+            thirdtext.visibility = View.VISIBLE
+            thirdEdittext.visibility = View.GONE
+            thirdtext.text = thirdEdittext.text
         }
 
     }
