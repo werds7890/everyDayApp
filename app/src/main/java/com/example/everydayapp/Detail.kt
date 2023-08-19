@@ -4,6 +4,7 @@ import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
@@ -12,6 +13,7 @@ import android.widget.TextView
 
 
 class Detail : AppCompatActivity() {
+    private var lineCount=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
@@ -39,14 +41,14 @@ class Detail : AppCompatActivity() {
         mbti.setText(mbtiData)
         motto.setText(mottoData)
 
+        seeMoreFeature()
+
         when(nameData){
             "이름 : 김현걸" -> detailImg.setImageResource(R.drawable.hyeon)
             "이름 : 황현아" -> detailImg.setImageResource(R.drawable.pika)
             "이름 : 이지현" -> detailImg.setImageResource(R.drawable.kitty)
             "이름 : 황일규" -> detailImg.setImageResource(R.drawable.leejamong)
         }
-
-
 
         firstedit.setOnClickListener {
             firsttext.visibility = View.GONE
@@ -71,6 +73,24 @@ class Detail : AppCompatActivity() {
             secondtext.text = secondEdittext.text
         }
 
+    }
+
+    private fun seeMoreFeature() {
+        val textAdd=findViewById<TextView>(R.id.textAdd)
+        val mottoAdd=findViewById<TextView>(R.id.motto)
+        //post메서드는 텍스트뷰가 화면에 표시된후 Runnable함!
+        mottoAdd.post {
+            lineCount=mottoAdd.layout.lineCount
+            if(mottoAdd.layout.getEllipsisCount(lineCount-1)>0){ //두번째줄부터 생략되었는지 체크
+                textAdd.visibility=View.VISIBLE
+
+                textAdd.setOnClickListener {
+                    mottoAdd.maxLines=Int.MAX_VALUE
+                    textAdd.visibility=View.GONE
+                }
+            }
+
+        }
     }
 
 }

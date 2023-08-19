@@ -73,8 +73,18 @@
                         android:layout_weight="1"
                         android:hint="좌우명을 입력하세요."
                         android:text=""
+                        android:maxLines="2"
+                        android:ellipsize="end"
                         android:textSize="16dp"
                         android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/textAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="더보기"
+                        android:textColor="#5A5A5A"
+                        android:visibility="gone"
+                        />
 
                 </LinearLayout>
             </ScrollView>
