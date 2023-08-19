@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="에브리데이"
+            android:text="@string/everyday"
             android:textColor="@color/red"
             style="@style/font2"
             android:textSize="25sp"
@@ -271,7 +271,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/round2_text"
-            android:text="익명"
+            android:text="@string/anonymous"
             android:paddingRight="20dp"
             />
 
@@ -290,7 +290,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
         android:textColor="@color/dark_gray"
-        android:text="한마디"
+        android:text="@string/comment"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />

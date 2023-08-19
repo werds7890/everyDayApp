@@ -14,7 +14,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/dark_gray"
-        android:text="글 쓰기"
+        android:text="@string/writing"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/red"
         android:textColor="@color/white"
-        android:text="완료"
+        android:text="@string/complete"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
         android:textColor="@color/dark_gray"
         android:layout_marginStart="30dp"
         android:layout_marginTop="78dp"
-        android:text="닉네임"
+        android:text="@string/nickname"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
         android:layout_marginTop="51dp"
         android:textColor="@color/dark_gray"
         android:ems="10"
-        android:hint="닉네임을 입력하세요."
+        android:hint="@string/input_nick_name"
         android:inputType="text"
         android:text=""
         android:backgroundTint="#B1BCBE"
@@ -86,7 +86,7 @@
             android:inputType="text"
             android:textSize="18sp"
             android:background="@null"
-            android:hint="글을 입력해주세요."/>
+            android:hint="@string/input_writing"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
