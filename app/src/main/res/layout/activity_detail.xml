@@ -84,7 +84,7 @@
             android:id="@+id/Mother_layout"
             android:layout_width="match_parent"
             android:layout_height="900dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="21dp"
             android:orientation="vertical"
             tools:ignore="ExtraText"
             tools:layout_editor_absoluteX="24dp">
