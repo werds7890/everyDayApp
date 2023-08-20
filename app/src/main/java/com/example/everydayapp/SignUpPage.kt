@@ -46,16 +46,16 @@ class SignUpPage : AppCompatActivity() {
             useTextWatcher.afterTextChanged(signUpId)
             checkBtn.setOnClickListener {
                 val maxLength = 15 // maxLength를 여기에 정의??????
-                val signUpId = signUpEditId.text
                 val currentLength = signUpId.length
                 when {
+                    (currentLength < 5 ) -> {Toast.makeText(this, "5자이상 15자만 가능합니다.", Toast.LENGTH_SHORT).show() }
                     (currentLength <= maxLength) -> {
                         Toast.makeText(this, "아이디를 사용하실 수 있습니다", Toast.LENGTH_SHORT).show() }
                 }
             }
 
             Log.d("Check_Button","Check Button Click")
-            }
+        }
 
 
         compBtn.setOnClickListener {
@@ -80,8 +80,10 @@ class SignUpPage : AppCompatActivity() {
                     Toast.makeText(this, "회원가입 완료!", Toast.LENGTH_SHORT).show()
                     val signUpIntent = Intent(this, LoginPage::class.java)
                     signUpIntent.putExtra("dataFromSignUpPage",signUpId)
+                    signUpIntent.putExtra("dataPW",signUpPw)
                     signUpIntent.putExtra("TeamNamedataFromSignUpPage",signUpTeamName)
                     startActivity(signUpIntent)
+                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
                 }
             }
         }
@@ -89,6 +91,7 @@ class SignUpPage : AppCompatActivity() {
         cencelBtn.setOnClickListener {
             Log.d("cencel_Button","cencel Button Click")
             finish()
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
         }
 
     }

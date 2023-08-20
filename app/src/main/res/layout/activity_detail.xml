@@ -1,87 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/square_box"
+    android:background="@drawable/orange"
     android:descendantFocusability="blocksDescendants"
     android:padding="20dp"
     tools:context=".Detail">
 
-
     <LinearLayout
-        android:id="@+id/User_Introduce"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/square_box"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/Chunshik"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"/>
-
-        <ScrollView
+        <LinearLayout
+            android:id="@+id/User_Introduce"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="190dp"
+            android:background="@drawable/square_box"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/detailImage"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@null"
+                android:scaleType="fitXY" />
+
 
             <LinearLayout
                 android:id="@+id/Introduction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:text="@string/이름_황일규"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                     <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:hint="@string/input_name"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/mbti"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:text="@string/MBTI_ENFJ"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/mbti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:hint="@string/input_mbti"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/motto"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:text="@string/i_안녕하세요_잘부탁드립니다"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/motto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:hint="@string/input_motto"
+                        android:text=""
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/textAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more"
+                        android:textColor="#5A5A5A"
+                        android:visibility="gone"
+                        />
 
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
+                </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="210dp"
-        tools:layout_editor_absoluteX="40dp">
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/Mother_layout"
             android:layout_width="match_parent"
             android:layout_height="900dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="21dp"
             android:orientation="vertical"
             tools:ignore="ExtraText"
             tools:layout_editor_absoluteX="24dp">
@@ -99,34 +111,37 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_gravity="start"
-                    android:src="@drawable/rogo" />
-                  
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@null"
+                    android:src="@drawable/everycustom" />
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_margin="0dp"
-                    android:text="게시물"
-                    android:textSize="18dp"
+                    android:layout_margin="5dp"
+                    android:text="@string/post"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/Edit_Button1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="140dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="130dp"
                     android:background="@android:color/transparent"
+                    android:contentDescription="@null"
                     app:srcCompat="@android:drawable/ic_menu_edit" />
 
                 <ImageButton
                     android:id="@+id/Save_Button1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
                     android:background="@android:color/transparent"
+                    android:contentDescription="@null"
                     app:srcCompat="@android:drawable/ic_menu_save" />
 
 
@@ -145,23 +160,24 @@
 
                 <TextView
                     android:id="@+id/firsttext"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/안녕하세요"
-                    android:textColor="#5A5A5A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/morning_1"
+                    android:textColor="@color/black"
                     android:textSize="6pt" />
 
                 <EditText
                     android:id="@+id/editText1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
                     android:background="@null"
                     android:textColor="#5A5A5A"
                     android:textSize="6pt" />
             </LinearLayout>
-
-            // 두번째 게시물
 
             <LinearLayout
                 android:id="@+id/Second_headline"
@@ -180,26 +196,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_margin="0dp"
-                    android:text="@string/게시물"
-                    android:textSize="18dp"
+                    android:layout_margin="5dp"
+                    android:text="@string/post"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/Edit_Button2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="140dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="130dp"
                     android:background="@android:color/transparent"
+                    android:contentDescription="@null"
                     app:srcCompat="@android:drawable/ic_menu_edit" />
 
                 <ImageButton
                     android:id="@+id/Save_Button2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
                     android:background="@android:color/transparent"
+                    android:contentDescription="@null"
                     app:srcCompat="@android:drawable/ic_menu_save" />
 
             </LinearLayout>
@@ -218,7 +236,9 @@
                     android:id="@+id/secondtext"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/감사합니다"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/thank_you"
                     android:textColor="#5A5A5A"
                     android:textSize="6pt" />
 
@@ -226,6 +246,8 @@
                     android:id="@+id/editText2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
                     android:layout_margin="20dp"
                     android:background="@null"
                     android:textColor="#5A5A5A"
@@ -244,48 +266,71 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_vertical"
+                    android:contentDescription="@null"
                     android:src="@drawable/everycustom" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_margin="0dp"
-                    android:text="@string/게시물"
+                    android:layout_margin="5dp"
+                    android:text="@string/post"
                     android:textSize="18dp"
                     android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/Edit_Button3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="140dp"
-                    android:background="@color/white"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="130dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@null"
                     app:srcCompat="@android:drawable/ic_menu_edit" />
 
                 <ImageButton
                     android:id="@+id/Save_Button3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
                     android:background="@android:color/transparent"
                     app:srcCompat="@android:drawable/ic_menu_save" />
 
             </LinearLayout>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/감사합니다"
-                android:textColor="#5A5A5A"
-                android:textSize="6pt" />
+                android:layout_height="150dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/square_box"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
+                <TextView
+                    android:id="@+id/thirdtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/goodbye"
+                    android:textColor="#5A5A5A"
+                    android:textSize="6pt" />
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="10dp"
+                    android:background="@null"
+                    android:textColor="#5A5A5A"
+                    android:textSize="6pt" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
 
 

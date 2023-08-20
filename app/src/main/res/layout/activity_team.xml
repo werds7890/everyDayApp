@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/orange">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".TeamActivity">
@@ -41,36 +42,45 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:text="@string/TeamName2"/>
+                android:textColor="@color/black"
+                android:text="Team Name : "/>
             <TextView
                 android:id="@+id/myPageTeamName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="@string/팀명을입력해주세요"/>
+                android:textColor="#333333"
+                android:hint="@string/input_team_name"/>
+
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/everycustom"/>
+                android:src="@drawable/everycustom" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:text="@string/ID2"/>
+                android:textColor="@color/black"
+                android:text="ID : " />
             <TextView
                 android:id="@+id/myPageId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="@string/아이디를입력해주세요"/>
+                android:textColor="#333333"
+                android:hint="@string/input_id" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,18 +94,20 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:text="@string/좌우명"/>
+                android:textColor="@color/black"
+                android:text="@string/team_motto"/>
             <TextView
                 android:id="@+id/myPageMotto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:hint="@string/좌우명을입력해주세요"/>
+                android:textColor="#333333"
+                android:hint="@string/input_motto"/>
         </LinearLayout>
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="410dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/square_box">
         <LinearLayout
@@ -117,12 +129,23 @@
                     app:civ_border_color="@color/black"
                     app:civ_border_overlay="true"/>
                 <TextView
+                    android:id="@+id/myPageTeamName2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/부끄럽조"
+                    android:hint="@string/team_name"
+                    android:textColor="#333333"
                     android:textSize="8pt"
                     android:textStyle="bold"
                     android:layout_margin="5dp"/>
+                <ImageButton
+                    android:id="@+id/imageBtn"
+                    android:src="@drawable/image"
+                    android:background="@android:color/transparent"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="10dp" />
                 <ImageButton
                     android:id="@+id/editBtn"
                     android:src="@drawable/pencil"
@@ -130,7 +153,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:scaleType="fitCenter"
-                    android:layout_marginStart="100dp"
+                    android:layout_marginStart="5dp"
                     android:layout_marginTop="10dp" />
                 <ImageButton
                     android:id="@+id/saveBtn"
@@ -143,8 +166,9 @@
                     android:layout_marginTop="10dp"/>
             </LinearLayout>
             <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="160dp"
                 android:layout_marginHorizontal="20dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/cat"/>
@@ -153,9 +177,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:textSize="6pt"
+                android:textSize="7pt"
                 android:textColor="@color/black"
-                android:text="@string/좋은아침"/>
+                android:text="@string/hello_everyone"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/teamSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="더보기"
+                android:textSize="6pt"
+                android:textColor="#5A5A5A"
+                android:layout_margin="20dp"
+                android:visibility="gone"
+                />
             <EditText
                 android:id="@+id/editText"
                 android:layout_width="wrap_content"
@@ -164,6 +200,7 @@
                 android:textSize="6pt"
                 android:textColor="#5A5A5A"
                 android:background="@null"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
