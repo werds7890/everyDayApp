@@ -3,7 +3,7 @@
 ### LoginPage
 아이디/비밀번호 미입력 시 안내 메시지\
 비밀번호 입력 시 보안(***으로 표현)\
-작성된 아이디,팀명을 TeamPage로 전달
+작성된 아이디를 TeamPage로 전달
 ```kotlin
 
 class LoginPage : AppCompatActivity() {
