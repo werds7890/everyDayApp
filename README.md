@@ -5,15 +5,6 @@
 비밀번호 입력 시 보안(***으로 표현)\
 작성된 아이디,팀명을 TeamPage로 전달
 ```kotlin
-package com.example.everydayapp
-
-import android.annotation.SuppressLint
-import android.content.Intent
-import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 
 class LoginPage : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -68,17 +59,6 @@ class LoginPage : AppCompatActivity() {
 하나라도 미 입력 시 안내 메시지\
 작성된 아이디,비밀번호를 loginPage로 전달
 ```kotlin
-package com.example.everydayapp
-
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 
 class SignUpPage : AppCompatActivity() {
     private lateinit var useTextWatcher: TextWatcher
@@ -172,19 +152,6 @@ class SignUpPage : AppCompatActivity() {
 사이트 아이콘 클릭 시 각 사이트 링로 이동\
 한마디 아이콘 클릭 시 WritingPage로 이동
 ```kotlin
-package com.example.everydayapp
-
-import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.util.Log
-import android.view.View
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.TextView
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
     private lateinit var writingResult:ActivityResultLauncher<Intent>
@@ -293,12 +260,6 @@ class MainActivity : AppCompatActivity() {
 ### WritingPage
 닉네임, 글 작성 후 MainPage로 입력 값 전달
 ```kotlin
-package com.example.everydayapp
-
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 
 class WritingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -320,15 +281,6 @@ class WritingActivity : AppCompatActivity() {
 개인 프로필 이미지, 정보 표시\
 더보기 클릭 시 잘린 텍스트 표시
 ```kotlin
-package com.example.everydayapp
-
-import android.os.Bundle
-import android.view.View
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-
 
 class Detail : AppCompatActivity() {
     private var lineCount=0
@@ -436,20 +388,6 @@ SignupPage에서 받아온 팀명, 아이디 값 표시\
 갤러리 아이콘 클릭 시 이미지 변경\
 더보기 클릭 시 잘린 텍스트 표시
 ```kotlin
-package com.example.everydayapp
-
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.util.Log
-import android.view.View
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.activity.result.contract.ActivityResultContracts
-import com.bumptech.glide.Glide
-import org.w3c.dom.Text
 
 class TeamActivity : AppCompatActivity() {
     private lateinit var imageView: ImageView
@@ -533,12 +471,6 @@ class TeamActivity : AppCompatActivity() {
 ### 추가 기능
 스플래시 화면
 ```kotlin
-package com.example.everydayapp
-
-import android.content.Intent
-import android.os.Bundle
-import android.os.Handler
-import androidx.appcompat.app.AppCompatActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
